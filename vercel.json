@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "express",
+  "buildCommand": "npm run build",
+  "functions": {
+    "server.mjs": {
+      "includeFiles": "{PastPort-interactive.html,demo-interactions.css,demo-interactions.js,photos/*.jpg,dist/speech-memory.js,node_modules/@elevenlabs/client/worklets/scribeAudioProcessor.js}"
+    }
+  }
+}

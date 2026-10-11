@@ -1,0 +1,19 @@
+{
+  "name": "pastport-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild speech-memory.js --bundle --minify --format=iife --platform=browser --target=es2022 --outfile=dist/speech-memory.js",
+    "start": "npm run build && node server.mjs",
+    "check": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@elevenlabs/client": "1.27.0",
+    "express": "5.3.0",
+    "express-rate-limit": "8.7.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.11"
+  }
+}

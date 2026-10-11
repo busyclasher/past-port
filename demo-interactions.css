@@ -1,0 +1,24 @@
+.comparison{margin:22px 0 18px;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--light)}
+.comparison h2{font-size:21px;color:var(--wine);margin-bottom:6px}
+.comparison p{font-size:12px;color:var(--muted)}
+.compare-frame{position:relative;height:220px;margin:12px 0 10px;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#eae2c9;--split:50%}
+.compare-art{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.compare-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.compare-art--earlier{clip-path:inset(0 calc(100% - var(--split)) 0 0)}
+.compare-tag{position:absolute;top:10px;z-index:2;max-width:42%;padding:5px 8px;border-radius:7px;background:#fffaf2ee;color:var(--wine);font-size:11px;font-weight:700;line-height:1.2;pointer-events:none}
+.compare-tag--left{left:10px}.compare-tag--right{right:10px;text-align:right}
+.compare-divider{position:absolute;inset:0 auto 0 var(--split);width:2px;background:var(--light);box-shadow:0 0 0 1px #30261f80;pointer-events:none;z-index:3}
+.compare-handle{position:absolute;left:var(--split);top:50%;width:48px;height:48px;transform:translate(-50%,-50%);border:3px solid var(--light);border-radius:50%;background:var(--wine);color:white;box-shadow:0 3px 10px #30261f50;display:grid;place-items:center;font-size:18px;font-weight:bold;line-height:1;cursor:ew-resize;touch-action:none;z-index:4}
+.compare-handle:focus-visible{outline:3px solid #235f83;outline-offset:4px}
+.compare-footer{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.compare-footer p{flex:1}
+.compare-reset{border:1px solid var(--red);border-radius:20px;background:transparent;color:var(--wine);padding:8px 14px;min-height:40px;font-weight:bold}
+.photo-hero img,.thumb img,.book-page .hero-art img{display:block;width:100%;height:100%;object-fit:cover}
+.photo-credits{margin-top:10px!important;line-height:1.65}
+.photo-credits a,.art-credit a,.photo-credit-inline a{color:var(--wine)}
+.photo-credit-inline{font-size:10px;color:var(--muted);margin:-4px 0 12px}
+.book-page,.cover{backface-visibility:hidden;transform-style:preserve-3d}
+.book-page{overflow-wrap:anywhere;background-image:linear-gradient(90deg,#cbb49430,transparent 12%),radial-gradient(#ac895020 .5px,transparent .5px);background-size:auto,6px 6px}
+h1[tabindex="-1"]:focus{outline:none}
+@media(max-width:380px){.compare-frame{height:195px}.comparison{padding:11px}.compare-tag{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.book-page,.cover{transform:none!important}}
